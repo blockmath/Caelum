@@ -20,6 +20,7 @@ public class ClientConfig {
     public static DoubleValue starBrightness;
     public static BooleanValue starColors;
     public static DoubleValue starSize;
+    public static BooleanValue accurateMoonShadow;
 
 
     public static void init(ModConfigSpec.Builder client) {
@@ -36,5 +37,6 @@ public class ClientConfig {
         starBrightness = client.comment("Controls the brightness/opacity of the colors.").defineInRange("stars.star_brightness",2, 0, Double.MAX_VALUE);
         starColors = client.comment("Should stars have colors?").define("stars.star_colors",true);
         starSize = client.comment("Controls the size of the (custom) stars").defineInRange("stars.star_size",1, 0, Double.MAX_VALUE);
+        accurateMoonShadow = client.comment("Should the moon shadow be accurate to the moon's position, or should literally everything else look vaguely good over time?").define("moon.accurate_shadow", false);
     }
 }

@@ -4,12 +4,14 @@
   "compatibilityLevel": "JAVA_17",
   "refmap": "mixins.caelum.refmap.json",
   "mixins": [
-    "MixinDimensionType"
+    "MixinDimensionType",
   ],
   "client": [
     "MixinClientLevel",
     "MixinFogRenderer",
-    "MixinLevelRenderer"
+    "MixinLevelRenderer",
+    "IrisCelestialUniformsMixin",
+    "IrisShadowMatricesMixin",
   ],
   "injectors": {
     "defaultRequire": 1
